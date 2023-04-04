@@ -1,6 +1,6 @@
 export class GetUserDto {
     id          :  String 
-    blockNumber  : number
+    // blockNumber  : number
     minerUsername :String 
     mmdWalletAddress :String 
     privateKey  :  String 

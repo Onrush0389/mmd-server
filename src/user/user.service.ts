@@ -14,7 +14,7 @@ export class UserService {
     
         const findUserurl = await this.getUser(user.minerUsername);
         
-        if (findUserurl) {
+        if (findUserurl) { 
           throw new NotFoundException('Miner already exists in MMD Community!');
         } else {
           //create a random wallet

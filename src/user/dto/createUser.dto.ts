@@ -2,7 +2,7 @@ import { IsNotEmpty, IsOptional, IsString, IsUrl } from 'class-validator';
 
 export class CreateUserDto {
     
-    blockNumber: number;
+    // blockNumber: number;
     @IsUrl()
     @IsNotEmpty()
     minerUsername: string;

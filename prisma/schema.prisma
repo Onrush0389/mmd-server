@@ -12,9 +12,24 @@ datasource db {
 
 model user {
   id            String @id @default(auto()) @map("_id") @db.ObjectId
-  blockNumber   Int @unique
+  // Does not need blockNumber in user
+  // blockNumber   Int @unique
   minerUsername String @unique
   mmdWalletAddress String @unique
   privateKey    String @unique
+}
+
+enum transactionStatus {
+  SUCCESS
+  FAILED
+}
+
+model transaction {
+  id            String @id @default(auto()) @map("_id") @db.ObjectId
+  blockNumber   Int @unique
+  minerUsername String @unique
+  transactionTime DateTime 
+  transactionAmount Float
+  transactionStatus transactionStatus
 }
 
